@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <title>Alternate timeline brackets</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+  <link rel="shortcut icon" href="static/boaticon.png" type="image/x-icon">
+
+ <!-- <script src="https://kit.fontawesome.com/4e2f940d4d.js"></script>
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> -->
+  <style>
+        @import url('https://rsms.me/inter/inter.css');
+    html { font-family: 'Inter', sans-serif; }
+    @supports (font-variation-settings: normal) {
+      html { font-family: 'Inter var', sans-serif; }
+    }
+    .wm{
+      width: 12rem;
+    }
+
+</style>
+
+<script>
+   function showMenu(){
+       var sideMenu = document.getElementById("sidemenu")
+       document.getElementById("overlay").style.opacity = .6
+       document.getElementById("sidecover").style.pointerEvents = "all"
+
+       sidemenu.style.transform=""
+   }
+
+   function hideMenu(){
+       var sideMenu = document.getElementById("sidemenu")
+       sidemenu.style.transform="translateX(100%)"
+       document.getElementById("overlay").style.opacity = .0
+       document.getElementById("sidecover").style.pointerEvents = "none"
+   }
+
+    function toggleSub(sub){
+       var oldVal = document.getElementById(sub).style.display
+       console.log(oldVal)
+       var newVal = oldVal != "table" ? "table" : "none"
+       document.getElementById(sub).style.display = newVal
+   }
+
+</script>
+</head>
+  <body class="bg-white">
+       
+      
+  </body>
+  <script type="application/javascript" src="index.js"></script>
+
+</html>
