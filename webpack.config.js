@@ -33,7 +33,7 @@ module.exports = {
     new UglifyJsPlugin(),
     new CopyPlugin([
       { from: './src/static', to: "static"},
-     // { from: 'CNAME'},
+      { from: 'CNAME'},
       { from: './src/pages'},
     ])
 
