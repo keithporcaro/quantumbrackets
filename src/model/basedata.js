@@ -92,8 +92,7 @@ const Descriptions = [
     "clothes dryers have self-cleaning lint filters",
     "Disney World is closed during full moons",
     "Cats won Best Picture",
-    "igloos are the newest tiny house fad",
-
+    "igloos are the newest tiny house fad"
 ]
 
 export {Conferences, Teams, Descriptions}
