@@ -56,7 +56,9 @@ const MainView = {
                     m(regionView, {region: "E", reverse: true}),
                     
                 ])
-                  
+            ]),
+            m("div", {class:"flex"}, [
+                m(playInView)
             ])
         ])
         
@@ -129,6 +131,16 @@ const fifthRoundView = {
     }
 }
 
+const playInView = {
+    view: (vnode)=>{
+        return m("dt", {class:"h-auto mv3 mh1 v-mid flex justify-center" },[
+            Model.playIns.map((game)=>{
+                return m(firstFourView,{game: Model.bracket.node(game)})
+            })
+        ] )
+    }
+}
+
 const gameView = {
     view: (vnode)=>{
         console.log(vnode.attrs.game)
@@ -143,6 +155,7 @@ const semiFinalView = {
     view: (vnode)=>{
         console.log(vnode.attrs.game)
         return m("dtc", {class:"v-mid mv2 pl2 pv1 f6 Inter wm ba bw1 b--gray"},[
+            m("p", {class:"ttu f7 mid-gray"}, "National semifinal"),
            m("p", {class:`${vnode.attrs.game["score"][1] > vnode.attrs.game["score"][0] ? "fw4" : "fw7"}`},`(${vnode.attrs.game["0"]["Seed"]}) ${vnode.attrs.game["0"]["Team"]}: ${vnode.attrs.game["score"][0]}`),
            m("p", {class:`${vnode.attrs.game["score"][0] > vnode.attrs.game["score"][1] ? "fw4" : "fw7"}`},`(${vnode.attrs.game["1"]["Seed"]}) ${vnode.attrs.game["1"]["Team"]}: ${vnode.attrs.game["score"][1]}`),
         ])
@@ -153,6 +166,17 @@ const finalView = {
         console.log(vnode.attrs.game)
         return m("dtc", {class:"v-mid mv2 pl2 pv0 f6 Inter wm ba bw1 b--black"},[
            m("p", {class:"ttu f7 mid-gray"}, "National championship"),
+           m("p", {class:`${vnode.attrs.game["score"][1] > vnode.attrs.game["score"][0] ? "fw4" : "fw7"}`},`(${vnode.attrs.game["0"]["Seed"]}) ${vnode.attrs.game["0"]["Team"]}: ${vnode.attrs.game["score"][0]}`),
+           m("p", {class:`${vnode.attrs.game["score"][0] > vnode.attrs.game["score"][1] ? "fw4" : "fw7"}`},`(${vnode.attrs.game["1"]["Seed"]}) ${vnode.attrs.game["1"]["Team"]}: ${vnode.attrs.game["score"][1]}`),
+        ])
+    }
+}
+
+const firstFourView = {
+    view: (vnode)=>{
+        console.log(vnode.attrs.game)
+        return m("dtc", {class:"v-mid mv1 pl2 mr3 pv1 f6 Inter wm ba bw1 b--light-gray"},[
+            m("p", {class:"ttu f7 mid-gray"}, "First four"),
            m("p", {class:`${vnode.attrs.game["score"][1] > vnode.attrs.game["score"][0] ? "fw4" : "fw7"}`},`(${vnode.attrs.game["0"]["Seed"]}) ${vnode.attrs.game["0"]["Team"]}: ${vnode.attrs.game["score"][0]}`),
            m("p", {class:`${vnode.attrs.game["score"][0] > vnode.attrs.game["score"][1] ? "fw4" : "fw7"}`},`(${vnode.attrs.game["1"]["Seed"]}) ${vnode.attrs.game["1"]["Team"]}: ${vnode.attrs.game["score"][1]}`),
         ])

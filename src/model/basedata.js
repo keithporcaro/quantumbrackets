@@ -92,7 +92,11 @@ const Descriptions = [
     "clothes dryers have self-cleaning lint filters",
     "Disney World is closed during full moons",
     "Cats won Best Picture",
-    "igloos are the newest tiny house fad"
+    "igloos are the newest tiny house fad",
+    "Pluto is still a planet",
+    "Pluto is still a planet, but Mercury isn't",
+    "DC residents have equal representation in Congress",
+    "finding Ukraine on a map is just a fun trivia question"
 ]
 
 export {Conferences, Teams, Descriptions}

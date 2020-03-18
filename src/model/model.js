@@ -114,7 +114,8 @@ const Model = {
     bracket: {},
     seed: "",
     description: "",
-    champ: {}
+    champ: {},
+    playIns: []
     //engine:
 }
 
@@ -425,6 +426,7 @@ seeds.map((seedgroup, seedline)=>{
 
     Model.bracket = bracket
     Model.description = random.pick(Descriptions)
+    Model.playIns = gameOrder[0]
     return bracket
 }
 
