@@ -18,6 +18,7 @@ let submitField = ""
 const MainView = {
     oninit: (vnode)=>{
         vnode.attrs.seed ? Generate(vnode.attrs.seed) : Generate()
+        inputField = Model.seed
     },
     view: (vnode)=>{
         return m("div", [
